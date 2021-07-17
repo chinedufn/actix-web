@@ -116,3 +116,10 @@ pub use crate::scope::Scope;
 pub use crate::server::HttpServer;
 // TODO: is exposing the error directly really needed
 pub use crate::types::{Either, EitherExtractError};
+
+// https://github.com/actix/actix-web/pull/2302
+mod temp {
+   pub use actix_http::Request;
+
+}
+pub use self::temp::*;
